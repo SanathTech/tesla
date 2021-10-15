@@ -85,6 +85,9 @@ const LeftButton = styled.div`
     cursor: pointer;
     margin: 11px;
     z-index: -1;
+    @media (max-width: 768px) {
+        width: 92vw;
+    }
 `
 
 const RightButton = styled(LeftButton)`
