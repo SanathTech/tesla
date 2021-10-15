@@ -15,18 +15,21 @@ function Header() {
     return (
         <Fade>
             <Container>
-                <a>
-                    <img src={logo} alt="" />
-                </a>
+                <Logo>
+                    <a href="#">
+                        <img src={logo} alt="" />
+                    </a>
+                </Logo>
                 <Menu>
                     {cars && cars.map((car, index) => (
                         <a key={index} href="#">{car}</a>
                     ))}
                 </Menu>
                 <RightMenu>
-                    <a href="#">Shop</a>
-                    <a href="#">Account</a>
-                    {/* <a href="#">Menu</a> */}
+                    <RightMenuFull>
+                        <a href="#">Shop</a>
+                        <a href="#">Account</a>
+                    </RightMenuFull>
                     <CustomMenu onClick={() => setBurgerStatus(true)}/>
                 </RightMenu>
                 <BurgerNav show={burgerStatus}>
@@ -53,6 +56,10 @@ function Header() {
                         <li><a href="#">Find Us</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Investor Relations</a></li>
+                        <RightMenuBurger>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Account</a></li>
+                        </RightMenuBurger>
                     </ScrollWrapper>
                 </BurgerNav>
             </Container>
@@ -62,9 +69,16 @@ function Header() {
 
 export default Header
 
+const Logo = styled.div`
+    padding: 0 40px;
+
+    @media(max-width: 1000px) {
+        padding: 0 0px;
+    }
+`
 
 const Container = styled.div`
-    min-height: 60px;
+    min-height: 55px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -82,11 +96,11 @@ const Menu = styled.div`
     flex: 1;
 
     a {
-        padding: 0 10px;
+        padding: 0 16px;
         color: rgb(24, 27, 33);
     }
 
-    @media(max-width: 890px) {
+    @media(max-width: 1000px) {
         display: none;
     }
 `
@@ -96,7 +110,14 @@ display: flex;
 align-items: center;
 
     a {
+        padding: 0 12px;
         margin-right: 10px;
+    }
+`
+
+const RightMenuFull = styled.div`
+    @media (max-width: 768px) {
+        display: none;
     }
 `
 
@@ -137,7 +158,7 @@ const CloseWrapper = styled.div`
 `
 
 const CarsWrapper = styled.div`
-    @media(min-width: 891px) {
+    @media(min-width: 1001px) {
         display: none;
     }
 `
@@ -147,4 +168,10 @@ const ScrollWrapper = styled.div`
     width: 100%;
     overflow-y: auto;
     padding: 0 20px;
+`
+
+const RightMenuBurger = styled.div`
+    @media (min-width: 769px) {
+        display: none;
+    }
 `

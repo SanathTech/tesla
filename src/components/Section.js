@@ -35,7 +35,7 @@ export default Section
 const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
-    padding-top: 15vh;
+    padding-top: 18vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,13 +56,13 @@ const ItemText = styled.div`
 `
 
 const Title = styled.div`
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     z-index: -1;
 `
 
 const ButtonGroup = styled.div`
     display: flex;
-    margin-bottom: 13px;
+    margin-bottom: 16px;
     @media (max-width: 768px) {
         flex-direction: column;
     }
