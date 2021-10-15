@@ -35,6 +35,7 @@ export default Section
 const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
+    padding-top: 15vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,15 +47,17 @@ const Wrap = styled.div`
     @media (max-width: 768px) {
         background-image: ${props => `url("${props.bgImageMob}")`};
     }
+    z-index: -1;
 `
 
 const ItemText = styled.div`
-    padding: 15vh;
     text-align: center;
+    z-index: -1;
 `
 
 const Title = styled.div`
     margin-bottom: 10px;
+    z-index: -1;
 `
 
 const ButtonGroup = styled.div`
@@ -63,6 +66,7 @@ const ButtonGroup = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
     }
+    z-index: -1;
 `
 
 const LeftButton = styled.div`
@@ -77,14 +81,17 @@ const LeftButton = styled.div`
     opacity: 0.99;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
     margin: 11px;
+    z-index: -1;
 `
 
 const RightButton = styled(LeftButton)`
     background: white;
     opacity: 0.7;
     color: black;
+    z-index: -1;
 `
 
 const DownArrow = styled.img`
@@ -92,6 +99,7 @@ const DownArrow = styled.img`
     margin-bottom: 15px;
     height: 45px;
     animation: animateDown infinite 2s;
+    z-index: -1;
 `
 
 const Buttons = styled.div`

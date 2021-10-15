@@ -13,6 +13,7 @@ import solarpanelmob from './mob-solar-panel.jpg';
 import solarroof from './solar-roof.jpg';
 import solarroofmob from './mob-solar-roof.jpg';
 import downarrow from './down-arrow.svg';
+import logo from './logo.svg';
 
 export {
     models,
@@ -29,5 +30,6 @@ export {
     solarpanelmob,
     solarroof,
     solarroofmob,
-    downarrow
+    downarrow,
+    logo
 };
