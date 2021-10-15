@@ -11,8 +11,7 @@ function App() {
   }
   
   const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
-  
-  <img src={images['doggy.png']} />
+
   return (
     <div className="App">
       <h1>My React App</h1>
