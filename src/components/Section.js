@@ -23,9 +23,7 @@ function Section({title, description, backgroundImg, backgroundImgMob, leftBtnTe
                             </RightButton>
                         }
                     </ButtonGroup>
-                    { downArrow && 
-                        <DownArrow src={downArrow} />
-                    }
+                    { downArrow ? <DownArrow src={downArrow} /> : <DownArrow />}
                 </Buttons>
             </Fade>
         </Wrap>
