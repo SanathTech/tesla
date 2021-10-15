@@ -63,7 +63,7 @@ const Title = styled.div`
 const ButtonGroup = styled.div`
     display: flex;
     margin-bottom: 16px;
-    @media (max-width: 768px) {
+    @media (max-width: 630px) {
         flex-direction: column;
     }
     z-index: -1;
@@ -85,7 +85,7 @@ const LeftButton = styled.div`
     cursor: pointer;
     margin: 11px;
     z-index: -1;
-    @media (max-width: 768px) {
+    @media (max-width: 630px) {
         width: 92vw;
     }
 `
