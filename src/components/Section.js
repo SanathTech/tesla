@@ -1,27 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
-import {models, model3, downarrow} from '../images/index';
+import Fade from 'react-reveal/Fade';
 
-function Section() {
+function Section({title, description, backgroundImg, backgroundImgMob, leftBtnText, rightBtnText, downArrow}) {
     return (
-        <Wrap>
-            <ItemText>
-                <Title>
-                    <h1>Model S</h1>
-                </Title>
-                <p>Description</p>
-            </ItemText>
-            <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                        Left Button
-                    </LeftButton>
-                    <RightButton>
-                        Right Button
-                    </RightButton>
-                </ButtonGroup>
-                <DownArrow src={downarrow} />
-            </Buttons>
+        <Wrap bgImage={backgroundImg} bgImageMob={backgroundImgMob}>
+            <Fade cascade>
+                <ItemText>
+                    <Title>
+                        <h1>{title}</h1>
+                    </Title>
+                    <p>{description}</p>
+                </ItemText>
+                <Buttons>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+                        { rightBtnText &&
+                            <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                    { downArrow && 
+                        <DownArrow src={downArrow} />
+                    }
+                </Buttons>
+            </Fade>
         </Wrap>
     )
 }
@@ -34,13 +40,13 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("${models}");
+    background-image: ${props => `url("${props.bgImage}")`};
     display: flex;
     flex-direction: column;
     justify-content: space-between; //vertical
     align-items: center; //horizontal
     @media (max-width: 768px) {
-        background-image: url("${models}");;
+        background-image: ${props => `url("${props.bgImageMob}")`};
     }
 `
 
