@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <h1>My React App</h1>
       <h2>Author: Sanath Punchibandage</h2>
-      <img src="static/media/model-s.jpg" alt="profile-image" />
+      <img src="/static/media/model-s.jpg" alt="profile-image" />
       <img src={images['model-3.jpg']} alt="profile-image" />
     </div>
   );
